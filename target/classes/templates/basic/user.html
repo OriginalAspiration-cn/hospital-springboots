@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--suppress ThymeleafVariablesResolveInspection-->
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>住院 | 系统管理</title>
+    <link th:href="@{/css/chartist.min.css}" rel="stylesheet">
+    <link th:href="@{/css/nice-select.css}" rel="stylesheet">
+    <link th:href="@{/css/bootstrap-datetimepicker.min.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link th:href="@{/css/layui.css}" rel="stylesheet">
+    <link th:href="@{/css/semantic.min.css}" rel="stylesheet">
+</head>
+<style>
+    .layui-font-50 {
+        font-size: 50px !important;
+    }
+</style>
+<body>
+
+<!--头部加菜单-->
+hello
+<!--头部加菜单结束-->
+
+<!--js-->
+<script th:src="@{/js/global.min.js}"></script>
+<script th:src="@{/js/Chart.bundle.min.js}"></script>
+<script th:src="@{/js/jquery.nice-select.min.js}"></script>
+<script th:src="@{/js/jquery.peity.min.js}"></script>
+<script th:src="@{/js/apexchart.js}"></script>
+<script th:src="@{/js/moment.js}"></script>
+<script th:src="@{/js/bootstrap-datetimepicker.min.js}"></script>
+<script th:src="@{/js/dashboard-1.js}"></script>
+<script th:src="@{/js/custom.min.js}"></script>
+<script th:src="@{/js/deznav-init.js}"></script>
+<script th:src="@{/js/demo.js}"></script>
+<script th:src="@{/js/styleSwitcher.js}"></script>
+<script>
+    $(function () {
+        $('#datetimepicker').datetimepicker({
+            inline: true,
+        });
+    });
+
+    $(document).ready(function () {
+        $(".booking-calender .fa.fa-clock-o").removeClass(this);
+        $(".booking-calender .fa.fa-clock-o").addClass('fa-clock');
+    });
+</script>
+</body>
+</html>
