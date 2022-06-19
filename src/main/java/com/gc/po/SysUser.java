@@ -14,16 +14,13 @@ import java.io.Serializable;
  * 
  */
 @Data
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class SysUser implements Serializable {
     /**
      * 用户id
      */
-    @Id //指定主键
-    @KeySql(useGeneratedKeys = true) //主键回填(简化后的)
-    private Integer id;
+    private int id;
 
     /**
      * 所属科室id
