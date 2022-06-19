@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>住院 | 用户管理</title>
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description">
+    <link th:href="@{/css/bootstrap-datepicker.min.css}" rel="stylesheet">
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" th:href="@{/css/morris.css}">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/metismenu.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/semantic.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/icons.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--头部加导航栏-->
+<div th:replace="~{commons/commons::pageIndex}"></div>
+hello [[${session.loginUser.userName}]]
+<!-- jQuery  -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/jquery.slimscroll.js}"></script>
+<script th:src="@{/js/waves.min.js}"></script>
+</body>
+</html>
