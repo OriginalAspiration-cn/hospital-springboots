@@ -20,7 +20,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/login").setViewName("login.html");//配置登录页面
         registry.addViewController("/paw").setViewName("password.html");//配置密码页面
         registry.addViewController("/ind").setViewName("index.html");//配置首页页面
-        registry.addViewController("/bas").setViewName("basic/user.html");//配置用户管理页面
+        registry.addViewController("/home").setViewName("basic/home.html");//配置首页页面
 
     }
     //自定义的国际化组件

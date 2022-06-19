@@ -39,4 +39,10 @@ public class indexController {
         }
     }
 
+    //欢迎页面
+    @RequestMapping("/home")
+    public String home(){
+        return "basic/home";
+    }
+
 }
