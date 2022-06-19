@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>住院 | 系统管理</title>
     <meta content="Responsive admin theme build on top of Bootstrap 4" name="description">
+<!--    <link rel="stylesheet" th:href="@{/css/xadmin.css}">-->
     <link th:href="@{/css/bootstrap-datepicker.min.css}" rel="stylesheet">
     <!--Morris Chart CSS -->
     <link rel="stylesheet" th:href="@{/css/morris.css}">
@@ -101,9 +102,9 @@
         <!--头部栏结束-->
 
         <!--菜单栏-->
-        <div class="navbar-custom">
-            <div class="container-fluid">
-                <div id="navigation">
+        <div class="left-nav navbar-custom">
+            <div id="nav" class="container-fluid">
+<!--                <div id="navigation">-->
                     <ul class="navigation-menu">
                         <a class="has-submenu" th:href="@{/ind}" style="padding: 20px;">
                             <i class="medrt icon" style="margin:8px;"></i>首页
@@ -115,21 +116,41 @@
                             </a>
                             <ul class="submenu">
                                 <li th:each="child:${menu.sonMenuSet}">
-                                    <a th:href="${child.menuUrl}"><i th:class="${child.menuIcon}"></i>[[${child.menuName}]]</a>
+                                    <a id="content" th:data-url="${child.menuUrl}" class="a-menu">
+                                        <i th:class="${child.menuIcon}"></i>
+                                        [[${child.menuName}]]
+                                    </a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </div>
+<!--                </div>-->
             </div>
         </div>
         <!--菜单栏结束-->
+        <!-- 右侧主体开始 -->
+        <div class="page-content">
+            <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <iframe th:src='@{/bas}' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+                    </div>
+                </div>
+                <div id="tab_show" style="opacity: 0.1;"></div>
+            </div>
+        </div>
+
+        <div class="page-content-bg"></div>
+        <style id="theme_style"></style>
+        <!-- 右侧主体结束 -->
     </header>
 </div>
 <hr>
 <!--内容-->
-<h5 class="text-xl-center">hello [[${loginUser.userName}]]</h5>
+<!--<h5 class="text-xl-center">hello [[${loginUser.userName}]]</h5>-->
 <!-- jQuery  -->
+<script th:src="@{/js/xadmin.js}"></script>
 <script th:src="@{/js/jquery.min.js}"></script>
 <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
 <script th:src="@{/js/jquery.slimscroll.js}"></script>
