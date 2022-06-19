@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class loginController {
+
     private UserMapper userMapper;
     @Autowired(required = false)
     public loginController (UserMapper userMapper){

@@ -19,11 +19,40 @@
     </properties>
     <dependencies>
 
+        <!--shiro和thymeleaf整合包-->
         <dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+            <groupId>com.github.theborakompanioni</groupId>
+            <artifactId>thymeleaf-extras-shiro</artifactId>
+            <version>2.1.0</version>
         </dependency>
-        <!--        @Slf4j注解的依赖 -->
+
+        <!--log4j-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <!--druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.10</version>
+        </dependency>
+
+        <!--
+        Subject 用户
+        SecurityManager 管理所有用户
+        Realm 连接数据
+        -->
+        <!--导入shiro和springboot的整合包-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+
+        <!--@Slf4j注解的依赖 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -34,7 +63,8 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!--        mybatis依赖-->
+
+        <!--mybatis依赖-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -97,7 +127,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <!--        映射静态资源-->
+        <!--映射静态资源-->
         <resources>
             <resource>
                 <directory>src/main/java</directory>
