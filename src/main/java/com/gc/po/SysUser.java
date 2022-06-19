@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import tk.mybatis.mapper.annotation.KeySql;
 
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
@@ -19,6 +21,8 @@ public class SysUser implements Serializable {
     /**
      * 用户id
      */
+    @Id //指定主键
+    @KeySql(useGeneratedKeys = true) //主键回填(简化后的)
     private Integer id;
 
     /**

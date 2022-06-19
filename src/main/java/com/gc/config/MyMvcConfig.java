@@ -17,7 +17,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
 
         registry.addViewController("/").setViewName("login.html");
-        registry.addViewController("/login").setViewName("login.html");//配置登录页面
+        registry.addViewController("/toLogin").setViewName("login.html");//配置登录页面
         registry.addViewController("/paw").setViewName("password.html");//配置密码页面
         registry.addViewController("/ind").setViewName("index.html");//配置首页页面
         registry.addViewController("/home").setViewName("index.html");//配置home页面

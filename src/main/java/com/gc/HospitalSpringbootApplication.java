@@ -13,7 +13,7 @@ public class HospitalSpringbootApplication {
     public static void main(String[] args) {
 //        把游览器提起来
         SpringApplication.run(HospitalSpringbootApplication.class, args);
-        String cmd = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe http://localhost:8023/user/login";
+        String cmd = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe http://localhost:8023/toLogin";
         Runtime run = Runtime.getRuntime();
         try{
             run.exec(cmd);

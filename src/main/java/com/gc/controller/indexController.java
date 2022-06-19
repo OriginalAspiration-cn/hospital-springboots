@@ -14,29 +14,12 @@ import java.util.List;
 
 @Controller
 public class indexController {
-    private MenuService service;
-    @Autowired
-    public indexController(MenuService service){
-        this.service=service;
-    }
-    //菜单
+
+
+   //主页面
     @RequestMapping("/ind")
-    public String index(HttpSession session, Model model){
-        SysUser loginUser= (SysUser) session.getAttribute(ProjectParameter.SESSION_USER);//拿到用户数据
-        if (loginUser!=null){
-            //登录
-//            int roleId=loginUser.getId();
-            List<MenuVo> listMenu=this.service.MenuVo();
-            //把菜单通过request传到页面
-            session.setAttribute("listMenu",listMenu);
-            session.setAttribute("loginUser",loginUser);
-            //转发
+    public String index(){
             return "/index";
-        }else {
-            //未登录
-            //重定向 到项目的根路径 跳转到login页面
-            return "redirect:/";
-        }
     }
 
     //欢迎页面

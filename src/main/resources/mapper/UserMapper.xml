@@ -19,8 +19,8 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, department_id, position_id, rank_id, user_name, code, portrait, `name`, `work`,
-    `year`, sex, seniority, remark
+        id, department_id, position_id, rank_id, user_name, code, portrait, name, work,
+    year, sex, seniority, remark
     </sql>
     <select id="selectName" resultMap="userMap">
         select <include refid="Base_Column_List"/> from sys_user where user_name=#{userName,jdbcType=VARCHAR}
