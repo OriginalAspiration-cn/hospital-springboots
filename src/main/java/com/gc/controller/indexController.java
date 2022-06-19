@@ -22,14 +22,14 @@ public class indexController {
     //菜单
     @RequestMapping("/ind")
     public String index(HttpSession session, Model model){
-        SysUser loginUser= (SysUser) session.getAttribute(ProjectParameter.SESSION_USER);
+        SysUser loginUser= (SysUser) session.getAttribute(ProjectParameter.SESSION_USER);//拿到用户数据
         if (loginUser!=null){
             //登录
 //            int roleId=loginUser.getId();
             List<MenuVo> listMenu=this.service.MenuVo();
             //把菜单通过request传到页面
             model.addAttribute("listMenu",listMenu);
-            model.addAttribute("loginUser",loginUser);
+            session.setAttribute("loginUser",loginUser);
             //转发
             return "/index";
         }else {
@@ -44,5 +44,6 @@ public class indexController {
     public String home(){
         return "basic/home";
     }
+
 
 }
