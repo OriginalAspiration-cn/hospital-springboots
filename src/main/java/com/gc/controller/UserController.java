@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 
 
+    //用户管理页面
     @RequestMapping("/user")
     public String user(){
         return "basic/user";
     }
+
 }

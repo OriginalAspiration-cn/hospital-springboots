@@ -9,10 +9,6 @@ import tk.mybatis.mapper.annotation.KeySql;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-/**
- * @author 
- * 
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
